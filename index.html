@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Wesson Care Hospital & Community Care</title>
+<style>
+    /* Reset & base styles */
+    * {margin:0; padding:0; box-sizing:border-box;}
+    body {font-family: 'Segoe UI', sans-serif; line-height:1.6; color:#333;}
+    a {text-decoration:none; color: inherit;}
+    img {max-width:100%; display:block;}
+
+    /* Hero Section */
+    .hero {
+        background: url('https://images.unsplash.com/photo-1588776814546-0b51b7a93bfc?auto=format&fit=crop&w=1950&q=80') center/cover no-repeat;
+        height:100vh;
+        display:flex;
+        flex-direction:column;
+        justify-content:center;
+        align-items:center;
+        text-align:center;
+        color:#fff;
+        position:relative;
+    }
+    .hero::after {
+        content:""; position:absolute; top:0; left:0; width:100%; height:100%;
+        background:rgba(0,0,0,0.5);
+    }
+    .hero-content {position:relative; z-index:1;}
+    .hero h1 {font-size:3rem; margin-bottom:1rem;}
+    .hero p {font-size:1.3rem; margin-bottom:2rem;}
+    .hero button {
+        padding:1rem 2rem; font-size:1rem; border:none; border-radius:8px;
+        background:#00b894; color:#fff; cursor:pointer; margin:0 10px; transition:0.3s;
+    }
+    .hero button:hover {background:#019875;}
+
+    /* Section Styles */
+    section {padding:80px 10%; text-align:center;}
+    h2 {font-size:2.5rem; margin-bottom:40px; color:#0984e3;}
+
+    /* About Section */
+    .about-container {display:flex; flex-wrap:wrap; justify-content:center; gap:20px;}
+    .about-card {flex:1 1 300px; padding:20px; background:#f1f2f6; border-radius:12px;}
+    .about-card h3 {color:#00b894; margin-bottom:10px;}
+
+    /* Services */
+    .services-container {display:flex; flex-wrap:wrap; gap:20px; justify-content:center;}
+    .service-card {flex:1 1 250px; background:#dfe6e9; padding:20px; border-radius:12px; transition:0.3s;}
+    .service-card:hover {transform:translateY(-10px); background:#b2bec3;}
+    .service-card h4 {margin-bottom:10px; color:#0984e3;}
+
+    /* Team */
+    .team-container {display:flex; flex-wrap:wrap; gap:20px; justify-content:center;}
+    .team-member {flex:1 1 250px; background:#f1f2f6; border-radius:12px; padding:20px; transition:0.3s;}
+    .team-member:hover {transform:scale(1.05);}
+    .team-member img {border-radius:50%; width:120px; margin-bottom:10px;}
+    .team-member h4 {margin-bottom:5px; color:#00b894;}
+    .team-member p {font-size:0.9rem; color:#555;}
+
+    /* How it Works */
+    .steps {display:flex; flex-wrap:wrap; justify-content:center; gap:20px;}
+    .step {flex:1 1 250px; background:#dfe6e9; border-radius:12px; padding:20px; transition:0.3s;}
+    .step:hover {transform:translateY(-10px);}
+    .step h4 {margin-bottom:10px; color:#0984e3;}
+
+    /* Testimonials */
+    .testimonials {position:relative; overflow:hidden;}
+    .testimonial {min-width:100%; transition:0.5s; padding:20px; background:#f1f2f6; border-radius:12px;}
+    .testimonial p {font-style:italic; margin-bottom:10px;}
+    .testimonial h4 {color:#00b894;}
+
+    /* Careers */
+    .careers {background:#dfe6e9; border-radius:12px; padding:40px;}
+    .careers h3 {margin-bottom:20px;}
+    .careers button {padding:1rem 2rem; font-size:1rem; border:none; border-radius:8px;
+        background:#00b894; color:#fff; cursor:pointer; transition:0.3s;}
+    .careers button:hover {background:#019875;}
+
+    /* Contact */
+    .contact p {font-size:1.2rem; color:#333; max-width:600px; margin:0 auto; line-height:1.5;}
+
+    /* Footer */
+    footer {background:#2d3436; color:#fff; padding:40px 10%; text-align:center;}
+    footer a {color:#00cec9; margin:0 10px;}
+
+    /* Floating Call Button */
+    .floating-phone {
+        position: fixed;
+        bottom: 20px;
+        right: 20px;
+        background: #00b894;
+        color: #fff;
+        padding: 15px 20px;
+        border-radius: 50px;
+        font-weight: bold;
+        font-size: 16px;
+        text-align: center;
+        text-decoration: none;
+        box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+        transition: transform 0.3s, background 0.3s;
+        z-index: 1000;
+    }
+    .floating-phone:hover {
+        background: #019875;
+        transform: scale(1.1);
+    }
+
+    /* Responsive */
+    @media(max-width:768px){
+        .about-container, .services-container, .team-container, .steps {flex-direction:column; align-items:center;}
+    }
+</style>
+</head>
+<body>
+
+<!-- Hero Section -->
+<section class="hero">
+    <div class="hero-content">
+        <h1>Bringing Healthcare to Every Doorstep</h1>
+        <p>Wesson Care Hospital & Community Care | House Calls for All Patients</p>
+        <button onclick="document.getElementById('careers').scrollIntoView({behavior:'smooth'})">Join Our Team</button>
+        <button onclick="document.getElementById('contact').scrollIntoView({behavior:'smooth'})">Book a Visit</button>
+    </div>
+</section>
+
+<!-- About Section -->
+<section id="about">
+    <h2>About Us</h2>
+    <div class="about-container">
+        <div class="about-card">
+            <h3>Wesson Care Hospital</h3>
+            <p>For-profit services for insured patients. House-call visits billed through insurance, with flexible scheduling and earning potential.</p>
+        </div>
+        <div class="about-card">
+            <h3>Wesson Community Care</h3>
+            <p>Non-profit services for non-insured patients. Competitive salary, community impact, and meaningful healthcare delivery at home.</p>
+        </div>
+    </div>
+</section>
+
+<!-- Services Section -->
+<section id="services">
+    <h2>Our Services</h2>
+    <div class="services-container">
+        <div class="service-card"><h4>General Practice</h4><p>Primary care house-call visits for all ages.</p></div>
+        <div class="service-card"><h4>Telemedicine</h4><p>Virtual consultations and follow-ups for convenience.</p></div>
+        <div class="service-card"><h4>Specialty Visits</h4><p>Specialist house-call services as needed.</p></div>
+        <div class="service-card"><h4>Community Care</h4><p>Serving non-insured patients with compassion and quality care.</p></div>
+    </div>
+</section>
+
+<!-- Team Section -->
+<section id="team">
+    <h2>Meet Our Team</h2>
+    <div class="team-container">
+        <div class="team-member">
+            <img src="https://images.unsplash.com/photo-1607746882042-944635dfe10e?auto=format&fit=crop&w=500&q=80" alt="Doctor">
+            <h4>Dr. Anna Richards </h4>
+            <p>Family Medicine | House Calls</p>
+        </div>
+    </div>
+</section>
+
+<!-- How It Works Section -->
+<section id="how-it-works">
+    <h2>How It Works</h2>
+    <div class="steps">
+        <div class="step"><h4>1. Call / Text</h4><p>Call or text us at <strong>512-521-6493</strong> with your insurance information to book a visit.</p></div>
+        <div class="step"><h4>2. House Call</h4><p>Our providers come to your home to provide personalized care.</p></div>
+        <div class="step"><h4>3. Treatment</h4><p>Receive treatment, prescriptions, and follow-up instructions on-site.</p></div>
+        <div class="step"><h4>4. Follow-Up</h4><p>Virtual follow-ups and ongoing care management included.</p></div>
+    </div>
+</section>
+
+<!-- Testimonials Section -->
+<section id="testimonials">
+    <h2>What Our Patients Say</h2>
+    <div class="testimonials" id="testimonial-slider">
+        <div class="testimonial"><p>"Wesson Care made house calls easy and personal. Truly life-changing."</p><h4>- Sarah L.</h4></div>
+        <div class="testimonial"><p>"Amazing team, compassionate care, and flexible scheduling for my elderly parents."</p><h4>- Mike R.</h4></div>
+        <div class="testimonial"><p>"Both the non-profit and hospital side are professional, yet approachable and caring."</p><h4>- Linda T.</h4></div>
+    </div>
+</section>
+
+<!-- Careers Section -->
+<section id="careers" class="careers">
+    <h2>Join Our Team</h2>
+    <h3>We are hiring Doctors, Nurse Practitioners & Physician Assistants</h3>
+    <p>Work for both Wesson Care Hospital (for-profit) and Wesson Community Care (non-profit). House-call adventure, competitive salary, and insurance billing experience.</p>
+    <button onclick="window.location.href='tel:5125216493'">Call / Text 512-521-6493</button>
+</section>
+
+<!-- Contact Section -->
+<section id="contact" class="contact">
+    <h2>Contact Us</h2>
+    <p>To book a house-call, call or text us at <strong>512-521-6493</strong> with your insurance information. No online booking available.</p>
+</section>
+
+<!-- Footer -->
+<footer>
+    <p>Wesson Care Hospital & Wesson Community Care</p>
+    <p>EIN: 39-5022059 | NPI: 1215804364</p>
+    <p><a href="https://www.linkedin.com/in/brian-wesson-6b159621b/" target="_blank">Connect on LinkedIn</a></p>
+    <p>&copy; 2025 Brian Wesson. All rights reserved.</p>
+</footer>
+
+<!-- Floating Phone Button -->
+<a href="tel:5125216493" class="floating-phone" title="Call / Text to Book">
+    📞 Call / Text to Book
+</a>
+
+<script>
+    // Simple testimonial slider
+    let current = 0;
+    const testimonials = document.querySelectorAll('.testimonial');
+    setInterval(() => {
+        testimonials.forEach((t,i)=>t.style.transform=`translateX(${100*(i-current)}%)`);
+        current = (current+1)%testimonials.length;
+    }, 5000);
+</script>
+
+</body>
+</html>
